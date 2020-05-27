@@ -1,0 +1,111 @@
+.btn-form
+{
+    position: relative;
+    left: 3px;
+    margin-top: 20px;
+    height: 30px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(147, 201, 209);
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid darkturquoise;
+    cursor: pointer;
+} 
+.container-fluid .mx-auto #form-connexion .input-form :hover{
+    background-color: #51BFD0;
+}
+.container-fluid .mx-auto #form-connexion2 :hover
+{
+    background-color: #51BFD0;
+}
+.jeminscris
+{
+    position: relative;
+    width: 100%;
+    background-color:#3addd6 ;
+    height: 30px;
+    top: -20px;
+}
+.inscription-joueur{
+    line-height: 9px;
+}
+.input2{
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+    margin-bottom: 10px;
+}
+.avatar2{
+    font-weight: bold;
+    font-size: 17px;
+}
+.fileUpload2{
+    position: relative;
+    height: 30px;
+    background-color:#3addd6 ;
+    border-radius: 3px;
+    border: 2px solid rgb(145, 193, 212);
+    width: 30%;
+}
+.creer2{
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    height: 30px;
+    background-color:rgb(147, 201, 209);
+    border-radius: 10px;
+    border: 2px solid rgb(145, 193, 212);
+    cursor: pointer;
+    color: white;
+}
+.creer2 :hover{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+    background-color:#252727 ;
+    border-radius: 10px;
+    border: 2px solid rgb(145, 193, 212);
+    cursor: pointer;
+    color: white;
+}
+@media screen and (max-width:367px){
+    .btn-form{
+        font-size: 7px;
+    }
+    .jeminscris
+{
+    position: relative;
+    width: 100%;
+    background-color:#3addd6 ;
+    height: 30px;
+    top: -20px;
+}
+.input2{
+    font-size: 10px;
+    height: 30px;
+}
+.avatar2{
+    font-weight: bold;
+    font-size: 12px;
+}
+.fileUpload2{
+    position: relative;
+    height: 20px;
+    background-color:#3addd6 ;
+    border-radius: 3px;
+    border: 2px solid rgb(145, 193, 212);
+    width: 50%;
+    font-size: 6px;
+    text-align: center;
+}
+.creer2{
+   font-size: 9px;
+}
+ }
