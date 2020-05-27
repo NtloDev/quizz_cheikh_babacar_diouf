@@ -1,26 +1,26 @@
 <div class="container-fluid" style="margin-top: 10px; height: 300px;">
-        <div class="mx-auto" style="background-color: rgb(255, 255, 255);  color:white;width: 50%; height: 490px;">
+    <div class="mx-auto" style="background-color: rgb(255, 255, 255);  color:white;width: 50%; height: 490px;">
         <nav class="navbar navbar-expand" style="background-color: #51BFD0; height: 60px;">
-                <p class="navbar-brand mx-auto" style="font-size: 14px; margin-top: 4px;">Je m'inscris</p>        
+            <p class="navbar-brand mx-auto" style="font-size: 14px; margin-top: 4px;">Je m'inscris</p>        
         </nav>
-    <div class="mx-auto text-center" style="margin-top:20px;">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                <form method="post" action="" id="form-connexion2" class="mx-auto text-center">
-                    <input type="text" name="prenom" placeholder="Prenom" error ="error-3" class="input2">
-                    <div class="error-form" id="error-3"></div>
-                    <input type="text" name="nom" placeholder="Nom" error ="error-4" class="input2">
-                    <div class="error-form" id="error-4"></div>
-                    <input type="text" name="login" placeholder="Login" error ="error-5" class="input2">
-                    <div class="error-form" id="error-5"></div>
-                    <input type="password" name="password" placeholder="Password" error ="error-6" class="input2">
-                    <div class="error-form" id="error-6"></div>
-                    <input type="password" name="confirm-password" placeholder="Confirm password" error ="error-7" class="input2" >
-                    <div class="error-form" id="error-7"></div>
-                    <div class="avatar2" style="color:black;">Avatar<input type="file" name="photo" class="fileUpload2" id="imgInp" accept="image/png, image/jpeg" id="imgInp">
-                    </div>
-                    <img src="#"/><br>
-                    <input type="submit" name="creer" value="Inscription" class="creer2">
-                </form>
+        <div class="mx-auto text-center" style="margin-top:20px;">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <form method="post" action="" id="form-connexion2" class="mx-auto text-center">
+                <input type="text" name="prenom" placeholder="Prenom" error ="error-3" class="input2">
+                <div class="error-form" id="error-3"></div>
+                <input type="text" name="nom" placeholder="Nom" error ="error-4" class="input2">
+                <div class="error-form" id="error-4"></div>
+                <input type="text" name="login" placeholder="Login" error ="error-5" class="input2">
+                <div class="error-form" id="error-5"></div>
+                <input type="password" name="password" placeholder="Password" error ="error-6" class="input2">
+                <div class="error-form" id="error-6"></div>
+                <input type="password" name="confirm-password" placeholder="Confirm password" error ="error-7" class="input2" >
+                <div class="error-form" id="error-7"></div>
+                <div class="avatar2" style="color:black;">Avatar<input type="file" name="photo" class="fileUpload2" id="imgInp" accept="image/png, image/jpeg" id="imgInp"></div>
+                <img src="#"/><br>
+                <input type="submit" name="creer" value="Inscription" class="creer2">
+            </form>
+        </div>
     </div>
 </div>
             <script>

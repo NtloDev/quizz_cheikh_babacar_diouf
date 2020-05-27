@@ -1,7 +1,7 @@
 <div class="container-fluid" style="margin-top: 100px; height: 300px;">
-        <div class="mx-auto" style="background-color: rgb(255, 255, 255);  color:white;width: 40%; height: 300px;">
+    <div class="mx-auto" style="background-color: rgb(255, 255, 255);  color:white;width: 40%; height: 300px;">
         <nav class="navbar navbar-expand" style="background-color: #51BFD0; height: 60px;">
-                <p class="navbar-brand mx-auto" style="font-size: 14px; margin-top: 4px;">Je me connecte</p>        
+            <p class="navbar-brand mx-auto" style="font-size: 14px; margin-top: 4px;">Je me connecte</p>        
         </nav>
         <div class="mx-auto text-center" >
             <form method="post" action ="" id="form-connexion">
@@ -20,7 +20,7 @@
             </form>                  
         </div>
     </div>
-    </div>
+</div>
     
 </div>
 <?php
@@ -37,7 +37,7 @@ catch(Exception $e)
 
 // Si tout va bien, on peut continuer
 
-// On récupère tout le contenu de la table jeux_video
+// On récupère tout le contenu de la table
 $reponse = $bdd->query('SELECT * FROM joueur');
 
 // On affiche chaque entrée une à une
@@ -45,7 +45,7 @@ while ($donnees = $reponse->fetch())
 {
 ?>
     <p>
-    <strong>Jeu</strong> : <?php echo $donnees['name_user']; ?><br />
+     <?php echo $donnees['name_user']; ?>
     
 <?php
 }

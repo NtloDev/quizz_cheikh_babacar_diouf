@@ -16,10 +16,7 @@
         <div class="mx-auto">
             <p class="navbar-brand text-center" style="font-size: 30px; margin-top: 4px;" >LE PLAISIR DE J<img src="asset/IMG/images/logo.jpeg" class="rounded-circle" alt="Cinque Terre" width="36" height="36" style="margin-top: -4px;">UER</p>
         </div>          
-    </nav>
-    
-    
-
+    </nav> 
     <?php 
             session_start();
             require_once("src/fonctions.php")  ;
