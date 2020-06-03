@@ -1,3 +1,4 @@
+
 .btn-form
 {
     position: relative;
@@ -14,13 +15,7 @@
     border: 1px solid darkturquoise;
     cursor: pointer;
 } 
-.container-fluid .mx-auto #form-connexion .input-form :hover{
-    background-color: #51BFD0;
-}
-.container-fluid .mx-auto #form-connexion2 :hover
-{
-    background-color: #51BFD0;
-}
+
 .jeminscris
 {
     position: relative;
@@ -39,7 +34,26 @@
     border: 2px solid #51BFD0;
     text-align: center;
     background-color: rgb(236, 243, 241);
-    margin-bottom: 10px;
+}
+.input3{
+    width: 10%;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+}
+.input4{
+    width: 10%;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+}
+.error-form{
+    color: red;
+    font-size: 10px;
 }
 .avatar2{
     font-weight: bold;
@@ -64,6 +78,20 @@
     cursor: pointer;
     color: white;
 }
+.creer3{
+    position: relative;
+    width: 25%;
+    margin-top: 10px;
+    height: 30px;
+    background-color:rgb(147, 201, 209);
+    border-radius: 10px;
+    border: 2px solid rgb(145, 193, 212);
+    cursor: pointer;
+    color: white;
+    left: -22%;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
 .creer2 :hover{
     position: relative;
     width: 100%;
@@ -75,7 +103,185 @@
     cursor: pointer;
     color: white;
 }
-@media screen and (max-width:367px){
+.conteneur{
+    background-color: #51BFD0;
+    box-sizing: border-box;
+    height: 50px; 
+    text-align:center;
+}
+.profil{
+    background-color: #51BFD0;
+    box-sizing: border-box; 
+    height:90px;
+}
+.img-profil{
+    position: relative;
+    width: 70px; 
+    height: 70px;
+    margin-top: 2px; 
+}
+.img-profil2{
+    position: relative;
+    width: 30%; 
+    height: 120px;
+    margin-top: 10px; 
+}
+.parametres{
+    position: relative;
+    font-size:30px;
+    color:white;
+}
+.deconnex{
+    position: relative;
+    top: -15px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: #283D3F;
+    font-size: 13px;
+    height: 30px;
+    text-align: center;
+
+}
+.deconnex a{
+    position: relative;
+    top: 10px;
+    color: #51BFD0;
+    font-size: 9px;
+    height: 5px;
+}
+.deconnex p{
+    position: relative;
+    color: white;
+    font-size: 9px;
+    left: -3%;
+}
+.deconnex a :hover{
+    background-color: #51BFD0;
+    color: white;
+}
+.prenom{
+    color:white; 
+    position:relative;
+    font-size: 13px;
+    top: 70px;
+    left: -30%;
+    background-color: yellow;
+    height: 10px;
+}
+.menu{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: #283D3F;
+    font-size: 13px;
+    height: 30px;
+}
+.col-2 :hover{
+    background-color: #51BFD0;
+    color: white;
+}
+.box{
+    margin-left: -1%;
+    border-radius: 10px;
+    border: 1px solid #51BFD0;
+}
+#inscrir{
+    font-size: 14px;
+    margin-top: 4px;
+ }
+ .titres-input{
+     color: black;
+ }
+ .input5-1{
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+    margin-right: 2%;
+    margin-bottom: 2px;
+ }
+ .input6{
+    position: relative;
+    top: 7px;
+    width: 5%;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+    margin-right: 1%;
+ }
+ .input7{
+    position: relative;
+    top: 7px;
+    width: 5%;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+    margin-right: 1%;
+ }
+@media screen and (max-width:911px){
+    .menu{
+        font-size: 6px;
+        height: 23px;
+    }
+    .profil{
+        height:75px;
+    }
+    .deconnex p{
+        font-size: 5px;
+        left: -3%;
+    }
+    .deconnex a{
+        top: 10px;
+        font-size: 5px;
+    }
+    .img-profil2{
+        width: 15%; 
+        height: 40px;
+    }
+}
+@media screen and (max-width:530px){
+    .img-profil{
+        width: 50px; 
+        height: 50px;
+        margin-top: 2px; 
+    }
+    .deconnex{
+        top: 7px;
+        height: 20px;
+        text-align: center;
+        width: 100%;
+        left: 0%;
+        height: 15px;
+    }
+    .deconnex a{
+        top: -15px;
+        font-size: 6px;
+        height: 5px;
+    }
+    .deconnex p{
+        position: relative;
+        color: white;
+        font-size: 6px;
+        left: -3%;
+        height: 10px;
+    }
+    .img-profil2{
+        width: 35%; 
+        height: 40px;
+        margin-top: 10px; 
+    }
+    .creer3{
+        
+        font-size: 6px;
+    }
+}
+@media screen and (max-width:380px){
     .btn-form{
         font-size: 7px;
     }
@@ -90,6 +296,14 @@
 .input2{
     font-size: 10px;
     height: 30px;
+}
+.input3{
+    font-size: 10px;
+    height: 20px;
+}
+.input4{
+    font-size: 10px;
+    height: 20px;
 }
 .avatar2{
     font-weight: bold;
@@ -107,5 +321,57 @@
 }
 .creer2{
    font-size: 9px;
+}
+.img-profil{
+    width: 30px; 
+    height: 30px;
+    margin-top: 5px; 
+    left:-40%;
+}
+.img-profil2{
+    width: 40%; 
+    height: 40px;
+    margin-top: 10px; 
+}
+.parametres{
+    font-size:15px;
+    top: -7px;
+}
+
+.conteneur{
+    height: 25px;
+}
+.profil{
+    height:44px;
+}
+
+.menu{
+    font-size: 6px;
+    width: 200%;
+    left: -25%;
+    top: -25px;
+}
+.deconnex{
+    top: -7px;
+    height: 20px;
+    text-align: center;
+    width: 160%;
+    left: -50%;
+    height: 15px;
+}
+.deconnex a{
+    top: -15px;
+    font-size: 6px;
+    height: 5px;
+}
+.deconnex p{
+    position: relative;
+    color: white;
+    font-size: 6px;
+    left: -3%;
+    height: 10px;
+}
+#inscrir{
+   font-size: 10px;
 }
  }
