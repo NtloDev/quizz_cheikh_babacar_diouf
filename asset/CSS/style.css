@@ -14,7 +14,7 @@
     border-radius: 5px;
     border: 1px solid darkturquoise;
     cursor: pointer;
-} 
+}
 
 .jeminscris
 {
@@ -46,6 +46,16 @@
 .input4{
     width: 10%;
     height: 20px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    text-align: center;
+    background-color: rgb(236, 243, 241);
+}
+.ok{
+    position: relative;
+    top: 2px;
+    width: 10%;
+    height: 30px;
     border-radius: 10px;
     border: 2px solid #51BFD0;
     text-align: center;
@@ -142,6 +152,17 @@
     text-align: center;
 
 }
+.suppri{
+    position: relative;
+    top: -15px;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: #283D3F;
+    font-size: 13px;
+    height: 30px;
+    text-align: center;
+
+}
 .deconnex a{
     position: relative;
     top: 10px;
@@ -176,12 +197,58 @@
     font-size: 13px;
     height: 30px;
 }
+.menu2{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: #283D3F;
+    font-size: 13px;
+    height: 30px;
+    
+    
+}
+.menu3{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: #283D3F;
+    font-size: 13px;
+    height: 30px;
+    left: 60%;
+    
+    
+}
+.menu4{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: #283D3F;
+    font-size: 13px;
+    height: 30px;
+    left: 140%;
+
+    
+}
+.menu6{
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+    background-color: red;
+    font-size: 13px;
+    height: 20px;
+}
 .col-2 :hover{
     background-color: #51BFD0;
     color: white;
 }
 .box{
     margin-left: -1%;
+    border-radius: 10px;
+    border: 1px solid #51BFD0;
+}
+.box2{
+    margin-top: 3px;
+    margin-left: 1%;
     border-radius: 10px;
     border: 1px solid #51BFD0;
 }
@@ -223,6 +290,30 @@
     text-align: center;
     background-color: rgb(236, 243, 241);
     margin-right: 1%;
+ }
+
+ .buttonj{
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
+ }
+ .qjeu{
+     position: relative;
+     margin-top: 50px;
+     font-size: 30px;
+     font-weight: bold;
+     color: white;
+     font-style: italic;
+ }
+ .reponses{
+     position: relative;
+     margin-top: 30px;
+     font-size: 25px;
+     font-style: normal;
+     
+ }
+ .inputreponses{
+    border-radius: 10px;
+    border: 2px solid #51BFD0;
  }
 @media screen and (max-width:911px){
     .menu{

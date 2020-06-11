@@ -1,4 +1,21 @@
 <?php 
+if (isset ($_GET['m'])){
+    $m=$_GET['m'];
+    $_SESSION['m']=$m;
+    try
+        {
+            // On se connecte à MySQL
+            $bdd = new PDO('mysql:host=localhost;dbname=quizz;charset=utf8', 'root', '');
+        }
+        catch(Exception $e)
+        {
+            // En cas d'erreur, on affiche un message et on arrête tout
+            die('Erreur : '.$e->getMessage());
+        }
+        $data2 = $bdd->query("SELECT * FROM question WHERE id_question = '{$m}'");
+        $dataf=$data2->fetch();
+       
+}
     if (isset($_POST['save3'])) 
     { 
     $question= $_POST['questionphp'];
@@ -35,12 +52,25 @@
             // En cas d'erreur, on affiche un message et on arrête tout
             die('Erreur : '.$e->getMessage());
         }
-        $sql= "INSERT INTO `question` (`id_question`, `intitule_question`, `nbrpoints_question`, `type_question`, `reponse1`,`reponse2`,`reponse3`, `reponse4`,`choix1`,`choix2`, `choix3`, `choix4`) VALUES (NULL, '$question', '$pts', '$type', '$rep1', '$rep2', '$rep3', '$rep4', '$choix1', '$choix2', '$choix3', '$choix4')";
-        $reponse= $bdd->exec($sql);  
-        exit('successA');                
+        if (isset ($_SESSION['m'])){
+            $m=$_SESSION['m'];
+            $data3 = $bdd->query("UPDATE `question` SET `intitule_question`='$question', `nbrpoints_question`='$pts', `type_question`='$type', `reponse1`='$rep1',`reponse2`='$rep2',`reponse3`='$rep3', `reponse4`='$rep4',`choix1`='$choix1',`choix2`='$choix2', `choix3`='$choix3', `choix4`='$choix4' WHERE id_question='{$m}'");
+        $dataUP=$data3->fetch();
+        var_dump($dataUP);
+        
+            exit('successB');                
+        }
+        else if(!isset($_SESSION['m'])){
+            $sql= "INSERT INTO `question` (`id_question`, `intitule_question`, `nbrpoints_question`, `type_question`, `reponse1`,`reponse2`,`reponse3`, `reponse4`,`choix1`,`choix2`, `choix3`, `choix4`) VALUES (NULL, '$question', '$pts', '$type', '$rep1', '$rep2', '$rep3', '$rep4', '$choix1', '$choix2', '$choix3', '$choix4')";
+            $reponse= $bdd->exec($sql);  
+            exit('successA');                
+        }
+        unset($_SESSION['m']);
+        
     }
+    
 ?>
-<div class="container-fluid" style="margin-left: 1%; width:98%; height: 500px; background-color:white; height: 515px;">
+<div class="container-fluid" style="margin-left: 0%; width:100%; height: 500px; background-color:white; height: 515px;">
 <div class="row" style="height: 405px;">
     <div class="col-4 text-center">
     <img src="asset/IMG/images/profils/IMG-20200513-WA0033.jpg" class="rounded-circle img-profil2" alt="Cinque Terre" ><br>
@@ -54,10 +84,10 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                 <form method="post" action="" id="form-question" class="mx-auto text-center">
                     <label for = "question" class="titres-input">Questions</label><br>
-                    <input type="text" name="question" class="input2" id ="error-3"><br>
+                    <input type="text" name="question" class="input2" placeholder="<?php if(isset($m)){echo $dataf[1];} ?>" id ="error-3"><br>
                     <div class="error-form" id="equestion">ce champ n'est pas valide</div>
                     <label for = "nbrpoints" class="titres-input">Nbre de points</label><br>
-                    <input type="number" name="nbrpoints" class="input3" id ="error-4">
+                    <input type="number" name="nbrpoints" class="input3" placeholder="<?php if(isset($m)){echo $dataf[2];} ?>" id ="error-4">
                     <div class="error-form" id="enbrpoints">ce champ n'est pas valide</div>
                     <label for = "typereponse" class="titres-input">Type de reponse</label><br>
                     <select class="input2" name="typereponse" id="select" >

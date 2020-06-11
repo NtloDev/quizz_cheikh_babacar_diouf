@@ -13,7 +13,7 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
         <!-- votre propre fichier dans le dossier de votre projet -->
   </head>
-  <body style="background-image: URL('asset/IMG/images/img-bg.JPG');" >
+  <body id ="body" style="background-image: URL('asset/IMG/images/img-bg.JPG');" >
         <nav class="navbar navbar-expand " style="background-color: #283D3F;  color:white; height: 50px;">
         <div class="mx-auto">
             <p class="navbar-brand text-center" style="font-size: 30px; margin-top: 4px;" >LE PLAISIR DE J<img src="asset/IMG/images/logo.jpeg" class="rounded-circle" alt="Cinque Terre" width="36" height="36" style="margin-top: -4px;">UER</p>
@@ -28,7 +28,7 @@
                     case "accueil":
                         require_once("asset/pages/admin.php");
                         break;
-                    case "jeux":
+                    case "joueur":
                         require_once("asset/pages/joueur.php");
                         $_SESSION['jouer']=1;
                         

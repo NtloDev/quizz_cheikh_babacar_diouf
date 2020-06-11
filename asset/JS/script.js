@@ -4,6 +4,11 @@ $(".input2").hover(function(){
     }, function(){
     $(this).css("background-color", "rgb(236, 243, 241)");
   });
+  $(".suppri").hover(function(){
+    $(this).css("background-color", "#51BFD0");
+    }, function(){
+    $(this).css("background-color", "rgb(236, 243, 241)");
+  });
   $(".creer2").hover(function(){
     $(this).css("background-color", "#51BFD0");
     }, function(){
@@ -210,7 +215,7 @@ $(document).ready(function(){
                 success: function(response){
                     console.log(response);
                     if (response.indexOf('successA')>=0){
-                        window.location = 'index.php?lien=accueil';
+                        window.location = 'index.php?lien=accueil&link=5';
                     }
                     else if (response.indexOf('successJ')>=0){
                         window.location = 'index.php?lien=joueur';
@@ -252,10 +257,7 @@ $(document).ready(function(){
                         }
                     },
                     });
-        }
-        
-             
-               
+        }       
     })
 })
 $(document).ready(function(){
@@ -284,18 +286,21 @@ $(document).ready(function(){
                     success: function(response){
                         console.log(response);
                         if (response.indexOf('successA')>=0){
-                            window.location = '';
+                            document.getElementById('form-connexion2').reset();
+                        }
+                        else if (response.indexOf('successB')>=0){
+                            window.location = 'index.php?lien=accueil&link=5';
                         }
                     },
                     });
-        }
-        
-             
-               
+        }               
     })
 })
 
 $(document).ready(function(){
+    
+   
+
     $("#creer3").on('click', function(){
         var question = $("#error-3").val();
         var pts = $("#error-4").val();
@@ -334,13 +339,131 @@ $(document).ready(function(){
                     success: function(response){
                         console.log(response);
                         if (response.indexOf('successA')>=0){
-                            window.location = '';
+                            document.getElementById('form-question').reset();
+                        }
+                        else if (response.indexOf('successB')>=0){
+                            window.location = 'index.php?lien=accueil&link=1';
                         }
                     },
-                    });
-        }
-        
-             
-               
+                });
+        }               
     })
+})
+$(document).ready(function(){
+   // load_data();
+   function load_data (page){
+       $.ajax({
+            url: 'index.php?lien=accueil&link=3&numPage=1',
+            method : 'POST',
+            data: {page:page},
+            success: function(data){
+                console.log(data);
+                $('#body').html(data);
+            },
+       })
+    }
+    $(document).on('click','.pagination_link', function(){
+        var page= $(this).attr("id");
+        load_data(page);
+    })
+})
+
+$(document).ready(function(){
+    fetch_data();
+    function fetch_data(){
+        var action="fetch";
+        $.ajax({
+            url: 'asset/pages/ListeQuestions.php',
+            method : 'POST',
+            data:{action:action},
+            success: function(data){
+                $('#row').html(data);
+               
+            },
+        })
+    }
+})
+
+    function deletedata(str){
+       var numero= str;
+       $.ajax({
+            url: 'index.php?lien=accueil&link=1&numPage=1',
+            method : 'POST',
+            data: "numero="+numero,
+            success: function(data){
+                console.log(data);
+                $("#target").load('index.php?lien=accueil&link=1&numPage=1');  
+            },
+        })
+       
+    }
+$(document).ready(function(){
+    function blockuser(str){
+        var numero= str;
+        $.ajax({
+            url: 'index.php?lien=accueil&link=3&numPage=1',
+            method : 'POST',
+            data: "numero="+numero,
+            success: function(data){
+                console.log(data);
+                document.getElementById('blo').reset();
+                //$("#target").load('index.php?lien=accueil&link=1&numPage=1');  
+            },
+        })
+    }
+            
+    $(document).on('click','.blok', function(){
+        var block= $(this).attr("id");
+        blockuser(block);
+    })
+        
+})
+
+    function nbq(strr){
+        var strr=strr;
+        var val= $("#error-4").val();
+        $.ajax({
+            url: 'index.php?lien=accueil&link=1',
+            method : 'POST',
+            data: {
+                strr:strr,
+                val:val,
+            },
+            success: function(data){
+                console.log(data);
+                document.getElementById('nbqquestion').reset();
+            },
+        })
+    }
+    
+
+    
+$(document).ready(function(){
+    function load_data (pagej,r1,r2,r3,r4){
+        $.ajax({
+            url: 'index.php?lien=joueur',
+            method : 'POST',
+            data: {
+                pagej:pagej,
+                r1:r1,
+                r2:r2,
+                r3:r3,
+                r4:r4,
+            },
+            success: function(data){
+                console.log(data);
+                $('#body').html(data);
+            },
+        })
+    }
+    $(document).on('click','.suivant_link', function(){
+        var pagej= $(this).attr("id");
+        if($("#r1").is(':checked')){var r1 = $("#r1").val();}
+        if (typeof $('#r2') != 'undefined'){if($("#r2").is(':checked')){var r2 = $("#r2").val();}}
+        if (typeof $('#r3') != 'undefined'){if($("#r3").is(':checked')){var r3 = $("#r3").val();}}
+        if (typeof $('#r4') != 'undefined'){if($("#r4").is(':checked')){var r4 = $("#r4").val();}}
+            
+        load_data(pagej,r1,r2,r3,r4); 
+    })
+     
 })
