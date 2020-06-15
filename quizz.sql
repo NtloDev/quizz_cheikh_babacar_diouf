@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 11 juin 2020 à 10:20
+-- Généré le :  lun. 15 juin 2020 à 19:12
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `question` (
   `choix3` varchar(500) NOT NULL,
   `choix4` varchar(500) NOT NULL,
   PRIMARY KEY (`id_question`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `question`
@@ -74,7 +74,9 @@ INSERT INTO `question` (`id_question`, `intitule_question`, `nbrpoints_question`
 (20, 'De quoi commence la devise du Senegal', 5, 'choixmultiple', 'Un but', 'Un peuple', 'Une foi', '', '', 'reponse2', '', ''),
 (21, 'Le Senegal est un pays', 5, 'choixmultiple', 'Communiste', 'Democratique', '', '', '', 'reponse2', '', ''),
 (22, 'Nelson Mandela a fais la prison pendant', 5, 'choixmultiple', '2 mois', '27 ans', '7 ans', '', '', 'reponse2', '', ''),
-(23, 'Quelle est lunite de mesure de la musique', 5, 'choixmultiple', 'Le decibelle', 'Le centimetre', '', '', 'reponse1', '', '', '');
+(23, 'Quelle est lunite de mesure de la musique', 5, 'choixmultiple', 'Le decibelle', 'Le centimetre', '', '', 'reponse1', '', '', ''),
+(24, 'Le Senegal est un pays laique', 7, 'unseulchoix', 'Vrai', 'Faux', '', '', 'reponse1', '', '', ''),
+(25, 'Senghor etais', 12, 'choixmultiple', 'Un president', 'Un commedien', 'un ecrivain', 'un cineaste', 'reponse1', '', 'reponse3', '');
 
 -- --------------------------------------------------------
 

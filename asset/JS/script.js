@@ -465,5 +465,9 @@ $(document).ready(function(){
             
         load_data(pagej,r1,r2,r3,r4); 
     })
+    
      
+})
+$("#retour").on('click', function(){
+    window.location.reload();
 })

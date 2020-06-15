@@ -315,6 +315,12 @@
     border-radius: 10px;
     border: 2px solid #51BFD0;
  }
+ .topscor{
+     position: relative;
+     background-color: white;
+     top: 40px;
+     left: -2%;
+ }
 @media screen and (max-width:911px){
     .menu{
         font-size: 6px;
